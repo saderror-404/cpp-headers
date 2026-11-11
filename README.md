@@ -4,16 +4,16 @@ This repositry is just for me to add and share my headers without flooding my gi
 
 ## Random.hpp
 
-Random.hpp is used with Random::getGen() and Random::getInt(min, max).
+Random.hpp is used with #include "Random.hpp", Random::getGen() and Random::getInt(min, max).
 
-### getGen:
+### getGen():
 ```
 static std::random_device rd;
 static std::mt19937 gen(rd());
 return gen;
 ```
 
-### getInt:
+### getInt(min, max):
 ```
 std::uniform_int_distribution<int> dist(min, max);
 return dist(getGen());
